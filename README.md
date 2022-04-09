@@ -35,17 +35,17 @@
     
     ```markdown
     Repository
-    	└ JSS
-    		└ Chapter1
-    			└ main.py
-    			└ Readme.md (flowchart 포함, Ask 포함)
-    			└ ppt.ppt
-    		└ Chapter2
-    		└ Chapter1_re-learn
-    			└ main.py
-    	└ KJM
-    		└ Chapter1
-    	└ Readme.md (스터디 내용)
+      └ JSS
+        └ Chapter1
+          └ main.py
+          └ Readme.md (flowchart 포함, Ask 포함)
+          └ ppt.ppt
+        └ Chapter2
+        └ Chapter1_re-learn
+          └ main.py
+      └ KJM
+        └ Chapter1
+      └ Readme.md (스터디 내용)
     ```
     
 - Anaconda 세팅
