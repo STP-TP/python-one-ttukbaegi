@@ -5,6 +5,7 @@ marp: true
 ## MVC pattern
 
 ![](/Chapter2/imgs/mvc_pattern.png)
+
     * Model(models.py): Database를 의미( 혹은 DB와 연결하는 객체)
     * View([Template(HTML)](/Chapter2/ToDoList/my_to_do_app/templates/)): 사용자에게 보여지는 UI로 보통 프론트엔드(HTML, js)
     * Control(view.py): UI를 통해서 내부 제어를 하기 위한 객체
@@ -15,11 +16,16 @@ marp: true
 **서버로 들어오는 domain은 제외하고 서버 내에서의 상대경로만 취급**
 
 * \urls.py
+
     ![](/JSS/Chapter2/imgs/root_urls_py.png)
-    * path('', ~~): url을 include내의 경로로 확장
+    
+    * path('', \~~): url을 include내의 경로로 확장
+   
 * \app_name\urls.py
+
     ![](/JSS/Chapter2/imgs/app_urls_py.png)
-    * path('', ~~): url의 메인(index) view를 보여주도록
+    
+    * path('', \~~): url의 메인(index) view를 보여주도록
     
 ---
 
@@ -47,6 +53,7 @@ marp: true
     ```
 * reverse: 서버 코드에서 url처럼 사용 할 수 있는 함수
     * url에서 name을 이용하여 search
+    
     ![](/JSS/Chapter2/imgs/app_urls_py.png)
 
 ---
