@@ -145,3 +145,47 @@ marp: true
 ---
 
 ## 이미 추적중인 파일 Gitignore 시키기
+
+## 2.3 Ask
+1. Django에서 Application구조 역할
+    * Django에서 하나의 프로젝트에 여러개의 Application을 생성하여 서로 중복되는 부분을 공유 할 수 있다.
+
+2. MVC 패턴 설명 및 MVC가 Django에서 파일, 폴더와의 매칭
+    * `Model`: Model.py
+    * `View` : Template 폴더
+    * `Control`: View.py
+
+---
+
+3. MVC와 MTV 비교
+    * MTV는 Model-Template-View로 사실상 MVC와 각각 1:1 매칭이 가능하다.  
+
+    | `MTV` | `MVC` | `Django` |
+    |:--:|:--:|:--:|
+    | Model | Model | Model.py |
+    | Template | View | Template폴더 |
+    | View | Control | View.py |
+
+4. GET와 POST의 차이
+    * GET과 POST는 View에서 데이터를 보낼 때 URL 상에서 데이터가 표시되느냐 안 되느냐의 차이를 가진다.
+    * GET이 URI에서 ?를 이용하여 값을 전송하고 속도가 상대적으로 빠르다
+    * POST는 전송하는 데이터를 숨길 수 있어 보안에 더 강하다.
+
+---
+
+5. 방식과 URI 매칭  
+    |**방 식**|**URI**|**상세 설명**|
+    |:--:|:--:|:--:|
+    |GET|기본 도메인/write|글 작성 페이지|
+    |POST|기본 도메인/write|**ㅁ**|
+    |GET|기본 도메인/posts|게시 글 read 페이지|
+    |GET|**ㅁ**|게시 글 수정 페이지|
+    |**ㅁ**|기본 도메인/update|게시 글 수정 처리|
+    |POST|기본 도메인/delete|**ㅁ**|
+    |GET|기본 도메인/post/id=1|**ㅁ**|
+
+---
+
+6. 우리의 프로젝트에서 Update기능은 어디에 적용 될 수 있을까? 그리고 어떻게 구현 할 수 있을까?
+    * 이미 작성해둔 메모를 수정하는 기능을 만든다면 Update를 이용 할 수 있다.
+    * POST를 이용해도 되지만 CRUD상에서 수정은 Update를 이용하는것이므로..
