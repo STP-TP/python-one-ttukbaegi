@@ -131,4 +131,17 @@ marp: true
 
 ---
 
+## App 폴더에 Template 폴더에 다시 App폴더
+* 하나의 프로젝트에 하나의 Application이라면 이렇게 할 필요 X
+* 하나의 프로젝트에 여러개의 Application이라면 같은 이름의 html을 가지고 있을 때 문제가 발생 할 수 있음.
+
+---
+
+## URI(Uniform Resource Identifier) vs URL(Uniform Resource Locator)
+* URL은 실제 리소스가 있는 위치를 가리킨다
+* URI는 리소스의 위치에 고유 식별자의 의미를 포함한다.
+* URI는 URL의 의미를 포함하고 있다.
+
+---
+
 ## 이미 추적중인 파일 Gitignore 시키기
