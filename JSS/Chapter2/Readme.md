@@ -4,7 +4,7 @@ marp: true
 
 ## MVC pattern
 
-![](/Chapter2/imgs/mvc_pattern.png)
+![](/JSS/Chapter2/imgs/mvc_pattern.png)
 
     * Model(models.py): Database를 의미( 혹은 DB와 연결하는 객체)
     * View([Template(HTML)](/Chapter2/ToDoList/my_to_do_app/templates/)): 사용자에게 보여지는 UI로 보통 프론트엔드(HTML, js)
