@@ -38,11 +38,12 @@
       └ JSS
         └ Chapter1
           └ main.py
-          └ Readme.md (flowchart 포함, Ask 포함)
+          └ Readme.md (단원 정리내용 Marp tool 사용해서 나열, Ask 포함)
           └ ppt.ppt
         └ Chapter2
         └ Chapter1_re-learn
           └ main.py
+        └ Readme.md (Flowchart 나열)
       └ KJM
         └ Chapter1
       └ Readme.md (스터디 내용)
