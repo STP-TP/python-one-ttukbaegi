@@ -117,5 +117,5 @@ marp: true
 ## Post or Get
 * 서버에 뭔가를 전달할 때 파라미터를 숨기냐 숨기지 않냐의 차이
 * POST는 GET에 비해 보안에 우수하고 데이터 길이 제한이 없지만(GET의 경우 256바이트) 전송속도가 느린 편
-* POST는 Create, Update, Delete에 관련된 것, GET은 Read에 관련된 것으로 생각하면 편하다.
+* POST는 Create, Update, Delete에 관련된 것, GET은 Read에 관련된 것으로 생각하면 편하다. 
 
