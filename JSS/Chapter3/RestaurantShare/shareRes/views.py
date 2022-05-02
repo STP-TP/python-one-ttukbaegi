@@ -28,6 +28,19 @@ def restaurantCreate(request):
     return render(request, 'shareRes/restaurantCreate.html', content)
 
 
+def restaurantUpdate(request, res_id):
+    categories = Category.objects.all()
+    restaurant = Restaurant.objects.get(id=res_id)
+    content = {'categories': categories, 'restaurant': restaurant}
+    # return HttpResponse('resturant를 수정할 페이지')
+    return render(request, 'shareRes/restaurantUpdate.html', content)
+
+def restaurantDelete(request):
+    res_id = request.POST['resId']
+    restaurant = Restaurant.object.get(id=res_id)
+    restaurant.delete()
+    return HttpResponseRedirect(reverse('index'))
+
 def Create_restaurant(request):
     category_id = request.POST['resCategory']
     category = Category.objects.get(id=category_id)
@@ -39,6 +52,23 @@ def Create_restaurant(request):
                          restaurant_link=link, restaurant_content=content, restaurant_keyword=keyword)
     new_res.save()
     return HttpResponseRedirect(reverse('index'))
+
+def Update_restaurant(request):
+    resId = request.POST['resId']
+    change_category_id = request.POST['resCategory']
+    change_category = Category.objects.get(id=change_category_id)
+    change_name = request.POST['resTitle']
+    change_link = request.POST['resLink']
+    change_content = request.POST['resContent']
+    change_keyword = request.POST['resLoc']
+    before_restaurant = Restaurant.objects.get(id=resId)
+    before_restaurant.category = change_category
+    before_restaurant.restaurant_name = change_name
+    before_restaurant.restaurant_link = change_link
+    before_restaurant.restaurant_content = change_content
+    before_restaurant.restaurant_keyword = change_keyword
+    before_restaurant.save()
+    return HttpResponseRedirect(reverse('resDetailPage', kwargs={'res_id': resId}))
 
 
 def categoryCreate(request):
