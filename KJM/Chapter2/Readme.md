@@ -53,7 +53,7 @@ marp: true
   * ORM(Object Relational Mapping) 기능을 통해 SQL 대신 파이썬 코드로 DB를 조작할 수 있다
 * Template : MVC패턴의 View와 같은 기능
   * View에서 로직을 처리한 후 html파일을 context와 함께 렌더링
-    -> 장고 자체의 Django Template 문법 덕분에 html 파일 내에서 context로 받은 데이터를 활용할 수 있다
+    -> 장고 자체의 Django Template 문법 덕분에 html 파일 내에서 context(Dictionary 형태)로 받은 데이터를 활용할 수 있다
 
 
 ---
