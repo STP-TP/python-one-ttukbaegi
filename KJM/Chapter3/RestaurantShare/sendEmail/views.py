@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
-from ..shareRes.models import *     # right?
+from shareRes.models import *     # right?
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -29,7 +29,7 @@ def send_email(request):
 
     server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
     server.login("djangoemailtester001@gamil.com", "tester001")         # gmail account, pw
-        
+
     msg = MIMEMultipart('alternative')
     msg['subject'] = inputTitle
     msg['From'] = "djangoemailtester001@gmail.com"
