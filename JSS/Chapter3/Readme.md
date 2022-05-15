@@ -29,3 +29,17 @@ marp: false
 |CASCADE|참조되는 모든 요소 삭제|
 |PROTECT| 삭제되지 말아야 하는 곳에 사용하면 될듯, ProtectedError 발생|
 |SET_NULL| 참조값을 null로 바꾼다. |
+
+## input에서 js 값 사용
+
+index.html에서 책 245페이지
+
+## MIMEText, MIMEMultipart
+두가지?
+
+## private info
+```python
+from sendEmail.env.mail_info import *
+```
+
+![](/JSS/Chapter3/imgs/private_info.png)
