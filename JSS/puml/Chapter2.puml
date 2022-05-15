@@ -1,0 +1,9 @@
+@startuml Chapter2
+Template.Index <|-- View.Index
+Template.Index --|> View.createTodo
+Template.Index --|> View.doneTodo
+View.createTodo --> Model.Todo
+View.doneTodo --> Model.Todo
+View.Index <-- Model.Todo
+Template.Index <--> Model.Todo
+@enduml
