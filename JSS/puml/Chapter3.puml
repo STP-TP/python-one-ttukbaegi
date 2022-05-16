@@ -1,0 +1,27 @@
+@startuml Chapter3
+package "shareRes" {
+    [메인 화면\n(index.html)] as index
+    [카테고리 생성화면\n(categoryCreate.html)] as categoryCreate
+    [레스토랑 생성화면\n(restaurantCreate.html)] as restaurantCreate
+    [레스토랑 상세화면\n(restaurantDetail.html)] as restaurantDetail
+    [레스토랑 업데이트\n(restaurantUpdate.html)] as restaurantUpdate
+    index --up-> categoryCreate : 카테고리 수정 페이지
+    categoryCreate --> index
+    categoryCreate --> categoryCreate : 카테고리 추가
+    categoryCreate --> categoryCreate : 카테고리 삭제
+    index --> restaurantCreate : 새 레스토랑 정보 생성
+    restaurantCreate --> index
+    index --> restaurantDetail : 레스토랑 세부정보
+    restaurantDetail --> index
+    restaurantDetail --> restaurantDelete : 레스토랑 삭제
+    restaurantDelete --> restaurantDetail
+    restaurantDetail --> restaurantUpdate : 레스토랑 정보 수정
+    restaurantUpdate --> restaurantDetail
+}
+
+node "sendEmail" {
+    [메일 보내기] as sendemail
+    index --> sendemail
+}
+
+@enduml
