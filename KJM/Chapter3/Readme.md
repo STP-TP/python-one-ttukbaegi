@@ -29,7 +29,6 @@ urlpatterns = [
        ...
    ```
 
-
 ---
 
  ## ASK
@@ -37,24 +36,23 @@ urlpatterns = [
  - 장고 모델 구성 때 다른 요소를 참조하는 요소를 정의할 때 함께 사용되는 on_delete 속성에 대한 기댓값으로는 어떠한 것들이 존재하며, 그 쓰임새는 어떻게 되는가?
 
    - CASCADE : 해당 데이터를 참조하는 요소 모두 삭제
-   - RESTRICT : 참조하는 요소가 있을 경우 에러 발생
-   - SET NULL : 참조하는 요소를 전부 NULL로
-   - SET_DEFAULT : 참조하는 요소를 전부 DEFAULT 값으로(DEFAULT 지정 필수)
-   - NO ACTION : 아무것도 하지 않음(DBMS에서 참조 무결성 검사 -> 성공시 실행, 실패시 캔슬)
-
----
-
- ## ASK
-
- - 장고 모델 대신 SQL의 경우
-
-   - CASCADE : 해당 데이터를 참조하는 요소 모두 삭제
    - PROTECT : 참조하는 요소가 있을 경우 에러 발생
    - SET_NULL : 참조하는 요소를 전부 NULL로
    - SET_DEFAULT : 참조하는 요소를 전부 DEFAULT 값으로(DEFAULT 지정 필수)
    - SET() : SET에 설정된 함수 실행시켜 참조
    - DO_NOTHING : 아무것도 하지 않음
+   
+---
 
+ ## ASK
+
+ - 장고 모델 대신 SQL의 경우
+   - CASCADE : 해당 데이터를 참조하는 요소 모두 삭제
+   - RESTRICT : 참조하는 요소가 있을 경우 에러 발생
+   - SET NULL : 참조하는 요소를 전부 NULL로
+   - SET_DEFAULT : 참조하는 요소를 전부 DEFAULT 값으로(DEFAULT 지정 필수)
+   - NO ACTION : 아무것도 하지 않음(DBMS에서 참조 무결성 검사 -> 성공시 실행, 실패시 캔슬)
+   
 ---
 
  ## ASK
