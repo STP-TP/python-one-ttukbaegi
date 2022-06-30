@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 import pandas as pd
 
@@ -48,4 +48,13 @@ def calculate(request):
         print("## EMAIL 도메인별 사용 인원")
         for key in email_domain_dic.keys():
             print("#", key, ": ", email_domain_dic[key], "명")
-    return HttpResponse('calculate!!!')
+    # return HttpResponse('calculate!!!')
+    grade_calculate_dic_to_session = {}
+    for key in grade_list:
+        grade_calculate_dic_to_session[int(key)] = {}
+        grade_calculate_dic_to_session[int(key)]['max'] = float(grade_calculate_dic[key]['max'])
+        grade_calculate_dic_to_session[int(key)]['avg'] = float(grade_calculate_dic[key]['avg'])
+        grade_calculate_dic_to_session[int(key)]['min'] = float(grade_calculate_dic[key]['min'])
+    request.session['grade_calculate_dic'] = grade_calculate_dic_to_session
+    request.session['email_domain_dic'] = email_domain_dic
+    return redirect('/result')
