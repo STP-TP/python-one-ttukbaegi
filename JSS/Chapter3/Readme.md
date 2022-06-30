@@ -108,6 +108,9 @@ from sendEmail.env.mail_info import *
 * Page Not Found(404)에러가 발생, 어떤 문제에서 발생할 가능성이 있을까?
     * Page not found이므로 url을 잘못 작성하여 대상 페이지를 찾을 수 없을때 발생 할 것.
     * 하나의 특정 이유를 꼽기는 힘들지만 가장 단순한 이유 일 수 있음
+
+---
+
 * 특정 모델의 데이터를 삭제하는 코드이다. 빈칸의 코드 완성
 ```python
 def Delete_restaurant(request):
