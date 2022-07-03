@@ -2,6 +2,9 @@
 **/migrations/
 **/.idea/
 
+# upload items
+**/media/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
